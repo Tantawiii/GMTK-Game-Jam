@@ -7,6 +7,7 @@ public class Waterdrop : MonoBehaviour
     [SerializeField] Transform end;
     [SerializeField] float lifetime = 0.5f;
     [SerializeField] float waittime = 5f;
+    [SerializeField] float waittime2 = 1f;
     [SerializeField] ParticleSystem splashEffect;
     private bool waterfixed;
 
@@ -28,7 +29,7 @@ public class Waterdrop : MonoBehaviour
         transform.position = start.position;
         splashEffect.Play();
         if (waterfixed) return;
-        godown();
+        Invoke(nameof(godown), waittime2);
     }
 
     public void fixwater()
@@ -40,5 +41,6 @@ public class Waterdrop : MonoBehaviour
     void unfixwater()
     {
         waterfixed = false;
+        godown();
     }
 }

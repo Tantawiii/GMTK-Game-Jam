@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class FixWater : MonoBehaviour
+public class FixWater : MonoBehaviour, ISortable
 {
-   
-    
-    //void fixWater()
-    //{
-    //    onFixed.Invoke();
-    //}
+    [SerializeField] UnityEvent onFixed;
+    public void Sort()
+    {
+        onFixed.Invoke();
+    }
 }
