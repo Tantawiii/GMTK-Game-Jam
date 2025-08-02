@@ -6,8 +6,7 @@ public class Waterdrop : MonoBehaviour
     [SerializeField] Transform start;
     [SerializeField] Transform end;
     [SerializeField] float lifetime = 0.5f;
-    [SerializeField] float waittime = 5f;
-    [SerializeField] float waittime2 = 1f;
+    [SerializeField] float waittime = 1f;
     [SerializeField] ParticleSystem splashEffect;
     private bool waterfixed;
 
@@ -27,18 +26,18 @@ public class Waterdrop : MonoBehaviour
     void endtween()
     {
         transform.position = start.position;
+        AudioManager.Instance.PlaySoundAt(SoundType.WaterDrop, end.gameObject);
         splashEffect.Play();
         if (waterfixed) return;
-        Invoke(nameof(godown), waittime2);
+        Invoke(nameof(godown), waittime);
     }
 
     public void fixwater()
     {
         waterfixed = true;
-        Invoke(nameof(unfixwater), waittime);
     }
 
-    void unfixwater()
+    public void unfixwater()
     {
         waterfixed = false;
         godown();

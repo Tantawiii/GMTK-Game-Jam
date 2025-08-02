@@ -5,6 +5,10 @@ using UnityEngine.Events;
 public class FixWater : MonoBehaviour, ISortable
 {
     [SerializeField] UnityEvent onFixed;
+    [SerializeField] UnityEvent onUnFixed;
+
+    bool m_Sorted = false;
+    bool ISortable.IsSorted => m_Sorted;
 
     private void Start()
     {
@@ -13,6 +17,13 @@ public class FixWater : MonoBehaviour, ISortable
 
     public void Sort()
     {
+        m_Sorted = true;
         onFixed.Invoke();
+    }
+
+    public void Unsort()
+    {
+        m_Sorted = false;
+        onUnFixed.Invoke();
     }
 }

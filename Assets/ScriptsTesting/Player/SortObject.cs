@@ -61,7 +61,14 @@ public class SortObject : MonoBehaviour
                     sortableOutline.enabled = true;
                     if (m_interactAction != null && m_interactAction.WasPressedThisFrame())
                     {
-                        sortable.Sort(); // Call ONLY on the hit object
+                        if (sortable.IsSorted)
+                        {
+                            sortable.Unsort(); // Call ONLY on the hit object
+                        }
+                        else
+                        {
+                            sortable.Sort(); // Call ONLY on the hit object
+                        }
                     }
                 }
                 else
@@ -92,5 +99,7 @@ public class SortObject : MonoBehaviour
 }
 public interface ISortable
 {
+    bool IsSorted { get; }
     void Sort();
+    void Unsort();
 }
