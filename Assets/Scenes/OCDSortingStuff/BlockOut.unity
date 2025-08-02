@@ -1496,6 +1496,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 924567363}
     m_Modifications:
+    - target: {fileID: 6819496000409788676, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+      propertyPath: m_TagString
+      value: droplet
+      objectReference: {fileID: 0}
     - target: {fileID: 8341308213316721003, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1602879
@@ -1550,17 +1554,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8341308213316721003, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
   m_PrefabInstance: {fileID: 1493338999}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1493339001 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5197639924550992916, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
-  m_PrefabInstance: {fileID: 1493338999}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d63224c725d7d149b1beefdbb29079f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1547316076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4777639062662591237, guid: 63279941ced3272428da26527e8b0b68, type: 3}
@@ -3104,21 +3097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3adb0b7beb6599f4e927ce1449837400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onFixed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1493339001}
-        m_TargetAssemblyTypeName: Waterdrop, Assembly-CSharp
-        m_MethodName: fixwater
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &9180218802755672570 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6806440043202652103, guid: e4422193ed6d3b244ae7cfa4e7bbf837, type: 3}

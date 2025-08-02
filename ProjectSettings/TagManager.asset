@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Sortable
+  - droplet
   layers:
   - Default
   - TransparentFX
