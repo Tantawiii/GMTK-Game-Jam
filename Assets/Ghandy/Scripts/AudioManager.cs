@@ -81,6 +81,9 @@ public class AudioManager : MonoBehaviour
     {
         BackgroundAudioSource = GetComponent<AudioSource>();
 
+        if (BackgroundAudioSource == null)
+            BackgroundAudioSource = gameObject.AddComponent<AudioSource>();
+
         BackgroundAudioSource.loop = true;
         BackgroundAudioSource.playOnAwake = true;
         BackgroundAudioSource.volume = BackgroundVolume;
