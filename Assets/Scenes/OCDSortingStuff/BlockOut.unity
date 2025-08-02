@@ -803,6 +803,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 465962466490269359, guid: 6600da8f85d0ee24c918319bf444407a, type: 3}
   m_PrefabInstance: {fileID: 4933175347076484360}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &710145156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3240397051315485982, guid: f29e45e6733bd6443b3850742c993b81, type: 3}
+  m_PrefabInstance: {fileID: 6606980523166005288}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &784762369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1089,7 @@ Transform:
   m_Children:
   - {fileID: 8954235236897532030}
   - {fileID: 3639625556671850276}
+  - {fileID: 1493339000}
   m_Father: {fileID: 980931514}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &972033565
@@ -1482,6 +1488,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479919835}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1493338999
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 924567363}
+    m_Modifications:
+    - target: {fileID: 8341308213316721003, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1602879
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341308213316721003, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.59843045
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341308213316721003, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.51174474
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341308213316721003, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341308213316721003, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341308213316721003, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341308213316721003, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341308213316721003, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341308213316721003, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341308213316721003, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819123320107291760, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+      propertyPath: m_Name
+      value: WaterDrop
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+--- !u!4 &1493339000 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8341308213316721003, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+  m_PrefabInstance: {fileID: 1493338999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1493339001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5197639924550992916, guid: 876b1827c5f7aca478eb9b0e401fc270, type: 3}
+  m_PrefabInstance: {fileID: 1493338999}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d63224c725d7d149b1beefdbb29079f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1547316076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4777639062662591237, guid: 63279941ced3272428da26527e8b0b68, type: 3}
@@ -2713,7 +2792,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3240397051315485982, guid: f29e45e6733bd6443b3850742c993b81, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8954235236897532034}
   m_SourcePrefab: {fileID: 100100000, guid: f29e45e6733bd6443b3850742c993b81, type: 3}
 --- !u!1001 &7049875970018473188
 PrefabInstance:
@@ -3010,6 +3092,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8692345890135156492, guid: f29e45e6733bd6443b3850742c993b81, type: 3}
   m_PrefabInstance: {fileID: 6606980523166005288}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8954235236897532034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710145156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adb0b7beb6599f4e927ce1449837400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onFixed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1493339001}
+        m_TargetAssemblyTypeName: Waterdrop, Assembly-CSharp
+        m_MethodName: fixwater
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &9180218802755672570 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6806440043202652103, guid: e4422193ed6d3b244ae7cfa4e7bbf837, type: 3}
