@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4642069168789723098}
   - component: {fileID: 2958659577625286992}
   - component: {fileID: 8340701242516594193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shelf UV
-  m_TagString: Untagged
+  m_TagString: Sortable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

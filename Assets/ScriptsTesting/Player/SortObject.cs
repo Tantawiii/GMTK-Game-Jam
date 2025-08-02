@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events; // Add this namespace
 
+
 public class SortObject : MonoBehaviour
 {
     [Header("Input Settings")]
@@ -13,8 +14,6 @@ public class SortObject : MonoBehaviour
     [SerializeField] private LayerMask interactableLayer;
     [SerializeField] private string targetTag = "Sortable";
 
-    [Header("Sorting Event")]
-    public UnityEvent OnSortEvent; // The Unity Event for delegation
 
     private Camera playerCamera;
 
@@ -50,11 +49,18 @@ public class SortObject : MonoBehaviour
         {
             if (hit.collider.CompareTag(targetTag))
             {
-                // Invoke the event instead of calling Sort() directly
-                OnSortEvent.Invoke();
+                // Get ISortable component from hit object
+                ISortable sortable = hit.collider.GetComponent<ISortable>();
+                if (sortable != null)
+                {
+                    sortable.Sort(); // Call ONLY on the hit object
+                }
             }
         }
     }
 
-    // Remove the empty Sort() method
+}
+public interface ISortable
+{
+    void Sort();
 }

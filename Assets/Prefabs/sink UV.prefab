@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3721303729622370810}
   - component: {fileID: 7312773309404609670}
   - component: {fileID: 3320324912175806873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sink UV
-  m_TagString: Untagged
+  m_TagString: Sortable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

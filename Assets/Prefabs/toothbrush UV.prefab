@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3174729900482357566}
   - component: {fileID: 2222661369333229872}
   - component: {fileID: 3407331452414445161}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toothbrush UV
-  m_TagString: Untagged
+  m_TagString: Sortable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

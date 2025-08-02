@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3670144794656221006}
   - component: {fileID: 7638940129214765114}
   - component: {fileID: -387881333688635958}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bottle 3 UV
-  m_TagString: Untagged
+  m_TagString: Sortable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

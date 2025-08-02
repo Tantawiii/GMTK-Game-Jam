@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2485322790181805941}
   - component: {fileID: 1933668003038946595}
   - component: {fileID: 8663946968814131656}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cup UV
-  m_TagString: Untagged
+  m_TagString: Sortable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

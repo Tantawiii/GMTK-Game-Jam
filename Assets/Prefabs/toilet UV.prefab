@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7565143324136139626}
   - component: {fileID: 2815749361869943466}
   - component: {fileID: -8571048572083285021}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: toilet UV
-  m_TagString: Untagged
+  m_TagString: Sortable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

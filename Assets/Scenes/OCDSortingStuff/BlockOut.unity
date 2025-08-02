@@ -685,6 +685,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460292925}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &500335651 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5437602753152381890, guid: 969a7fe88e05e0440a5607fca4905441, type: 3}
+  m_PrefabInstance: {fileID: 1234428578660575127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &636317435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,9 +1261,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   targetTag: Sortable
-  OnSortEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1177207769
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,6 +1669,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 660c29076731d2f42b9cb89604c01851, type: 3}
       insertIndex: -1
       addedObject: {fileID: 980931514}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 660c29076731d2f42b9cb89604c01851, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 500335651}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -1308154924754892956, guid: 660c29076731d2f42b9cb89604c01851, type: 3}
       insertIndex: -1
@@ -2180,7 +2185,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1688451819}
     m_Modifications:
     - target: {fileID: 936827319695705597, guid: 969a7fe88e05e0440a5607fca4905441, type: 3}
       propertyPath: m_Name
@@ -2188,15 +2193,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5437602753152381890, guid: 969a7fe88e05e0440a5607fca4905441, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.286883
+      value: -0.40840435
       objectReference: {fileID: 0}
     - target: {fileID: 5437602753152381890, guid: 969a7fe88e05e0440a5607fca4905441, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2756324
+      value: 2.1339684
       objectReference: {fileID: 0}
     - target: {fileID: 5437602753152381890, guid: 969a7fe88e05e0440a5607fca4905441, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.986
+      value: -1.9842563
       objectReference: {fileID: 0}
     - target: {fileID: 5437602753152381890, guid: 969a7fe88e05e0440a5607fca4905441, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3075,4 +3080,3 @@ SceneRoots:
   - {fileID: 4981780606033394174}
   - {fileID: 1688451818}
   - {fileID: 1989740953}
-  - {fileID: 1234428578660575127}

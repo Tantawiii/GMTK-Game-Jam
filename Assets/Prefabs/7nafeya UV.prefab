@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1972547629426402022}
   - component: {fileID: 4753895802752670079}
   - component: {fileID: 2613647525950404310}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 7nafeya UV
-  m_TagString: Untagged
+  m_TagString: Sortable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
