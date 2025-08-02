@@ -5,6 +5,12 @@ using UnityEngine.Events;
 public class FixWater : MonoBehaviour, ISortable
 {
     [SerializeField] UnityEvent onFixed;
+
+    private void Start()
+    {
+        GetComponent<Outline>().enabled = false;
+    }
+
     public void Sort()
     {
         onFixed.Invoke();
