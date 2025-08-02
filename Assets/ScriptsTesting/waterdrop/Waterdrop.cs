@@ -7,6 +7,7 @@ public class Waterdrop : MonoBehaviour
     [SerializeField] Transform end;
     [SerializeField] float lifetime = 0.5f;
     [SerializeField] float waittime = 5f;
+    [SerializeField] ParticleSystem splashEffect;
     private bool waterfixed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,6 +26,7 @@ public class Waterdrop : MonoBehaviour
     void endtween()
     {
         transform.position = start.position;
+        splashEffect.Play();
         if (waterfixed) return;
         godown();
     }
