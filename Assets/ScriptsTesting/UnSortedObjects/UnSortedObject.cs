@@ -12,7 +12,11 @@ public class UnSortedObject : MonoBehaviour, ISortable
     public void Sort()
     {
         Debug.Log($"{gameObject.name} has been sorted.");
-        animator.SetBool("IsSorted", true);
+
+        if (animator != null)
+        {
+            animator.SetBool("IsSorted", true);
+        }
         // Add sorting logic here
     }
 }
