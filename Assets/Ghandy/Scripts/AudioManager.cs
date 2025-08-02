@@ -28,7 +28,7 @@ public enum SoundType
 public class SoundEntry
 {
     public SoundType Type;
-    public AudioClip Clip;
+    public List<AudioClip> Clips;
 }
 
 public class AudioManager : MonoBehaviour
@@ -45,7 +45,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private List<SoundEntry> SoundClipsList;
 
     // === Runtime ===
-    private Dictionary<SoundType, AudioClip> SoundClipsDict = new();
+    private Dictionary<SoundType, List<AudioClip>> SoundClipsDict = new();
     private AudioSource BackgroundAudioSource;
 
     // === Initialization ===
@@ -73,7 +73,7 @@ public class AudioManager : MonoBehaviour
         foreach (var entry in SoundClipsList)
         {
             if (!SoundClipsDict.ContainsKey(entry.Type))
-                SoundClipsDict.Add(entry.Type, entry.Clip);
+                SoundClipsDict.Add(entry.Type, entry.Clips);
         }
     }
 
@@ -105,33 +105,49 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySoundAt(SoundType type, GameObject target)
     {
-        if (!SoundClipsDict.TryGetValue(type, out AudioClip clip) || clip == null)
+        if (!SoundClipsDict.TryGetValue(type, out List<AudioClip> clips) || clips == null)
         {
             Debug.LogWarning($"Sound type '{type}' not found or clip is null.");
+            if (clips.Count == 0)
+            {
+                Debug.LogWarning($"No clips available for sound type '{type}'.");
+            }
             return;
         }
 
+        int randomIndex = UnityEngine.Random.Range(0, clips.Count);
+        float randomPitch = UnityEngine.Random.Range(0.8f, 1.2f);
+
         AudioSource tempSource = target.AddComponent<AudioSource>();
-        tempSource.clip = clip;
+        tempSource.clip = clips[randomIndex];
+        tempSource.pitch = randomPitch;
         tempSource.spatialBlend = 1.0f; // 3D sound
         tempSource.Play();
 
-        Destroy(tempSource, clip.length);
+        Destroy(tempSource, clips[randomIndex].length);
     }
 
 
     public void PlayLoop(SoundType type, GameObject target)
     {
-        if (!SoundClipsDict.TryGetValue(type, out AudioClip clip) || clip == null)
+        if (!SoundClipsDict.TryGetValue(type, out List<AudioClip> clips) || clips == null)
         {
             Debug.LogWarning($"Sound type '{type}' not found or clip is null.");
+            if (clips.Count == 0)
+            {
+                Debug.LogWarning($"No clips available for sound type '{type}'.");
+            }
             return;
         }
 
+        int randomIndex = UnityEngine.Random.Range(0, clips.Count);
+        float randomPitch = UnityEngine.Random.Range(0.8f, 1.2f);
+
         AudioSource tempSource = target.AddComponent<AudioSource>();
 
-        tempSource.clip = clip;
+        tempSource.clip = clips[randomIndex];
         tempSource.spatialBlend = 1.0f; // 3D sound
+        tempSource.pitch = randomPitch;
         tempSource.loop = true;
         tempSource.spatialBlend = 1.0f;
         tempSource.playOnAwake = false;

@@ -383,39 +383,67 @@ MonoBehaviour:
   BackgroundVolume: 0.2
   SoundClipsList:
   - Type: 0
-    Clip: {fileID: 8300000, guid: 3e1ee43a29ae103498b7837982f3bf22, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: 3e1ee43a29ae103498b7837982f3bf22, type: 3}
   - Type: 4
-    Clip: {fileID: 8300000, guid: 0ef380e66554cd243953a06c4038f0f1, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: 0ef380e66554cd243953a06c4038f0f1, type: 3}
   - Type: 6
-    Clip: {fileID: 8300000, guid: 237bdf2b80547fe4588f0875d96a1f2c, type: 3}
+    Clips: []
   - Type: 1
-    Clip: {fileID: 8300000, guid: e81f0956c56bf9349b1dc78e00fdb435, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: e81f0956c56bf9349b1dc78e00fdb435, type: 3}
   - Type: 2
-    Clip: {fileID: 8300000, guid: eff7632eccce8c946a43ca7f300d3d02, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: eff7632eccce8c946a43ca7f300d3d02, type: 3}
   - Type: 3
-    Clip: {fileID: 8300000, guid: 20a53ae22c9a36140ae56581bc3fa1e7, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: 20a53ae22c9a36140ae56581bc3fa1e7, type: 3}
   - Type: 5
-    Clip: {fileID: 8300000, guid: 68fc8d4ba0fd15e4eb918deb762460be, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: 68fc8d4ba0fd15e4eb918deb762460be, type: 3}
+    - {fileID: 8300000, guid: 99a234fcbec3e9d4cbf390b0c0e2b43f, type: 3}
+    - {fileID: 8300000, guid: 82c33f439a2111a4ea4c93ccc5e6b825, type: 3}
+    - {fileID: 8300000, guid: ac990774fae5a5b4081e1f972a0e1775, type: 3}
+    - {fileID: 8300000, guid: beba5e6d9108a784eb7f8e8dd06c947b, type: 3}
+    - {fileID: 8300000, guid: 4c88e254691981443a64deabca2b2159, type: 3}
+    - {fileID: 8300000, guid: 34062b6ec16cf9845bd553e686445ae5, type: 3}
   - Type: 7
-    Clip: {fileID: 8300000, guid: abfe3e789db8ee3419a59da996aec414, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: abfe3e789db8ee3419a59da996aec414, type: 3}
   - Type: 8
-    Clip: {fileID: 8300000, guid: e7d41fd6b7e71394d9a9fc35405e5ea3, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: e7d41fd6b7e71394d9a9fc35405e5ea3, type: 3}
   - Type: 9
-    Clip: {fileID: 8300000, guid: a9381eec987a61d42820bb6bf8b661b1, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: a9381eec987a61d42820bb6bf8b661b1, type: 3}
   - Type: 10
-    Clip: {fileID: 8300000, guid: f5de7f02cb5141f44946e16295576ab6, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: f5de7f02cb5141f44946e16295576ab6, type: 3}
   - Type: 11
-    Clip: {fileID: 8300000, guid: 0b45eecf77b78cf42bff333658cd7275, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: 2a1cbefed181d734581dd39cebf2993f, type: 3}
+    - {fileID: 8300000, guid: 5aefcbfe85cf5a9499ac1b236f507f31, type: 3}
+    - {fileID: 8300000, guid: 6fa576d0e7c89804d923596fac0e027a, type: 3}
+    - {fileID: 8300000, guid: e9caccc082aa5d948b345c70e8880384, type: 3}
+    - {fileID: 8300000, guid: 54905daf8c8d46947893d38ac4f96984, type: 3}
+    - {fileID: 8300000, guid: c0b3b673b52c00144ad389c3bc4536ce, type: 3}
+    - {fileID: 8300000, guid: a825e126b1e721c4184f24c122155e71, type: 3}
   - Type: 12
-    Clip: {fileID: 8300000, guid: fecf9612e7ea4a54bb7d84a14d8e0ee6, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: fecf9612e7ea4a54bb7d84a14d8e0ee6, type: 3}
   - Type: 13
-    Clip: {fileID: 8300000, guid: e434f2bf0297ea848962c6c4322e5584, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: 2f6e231a934a51a47bd707d15b4ed600, type: 3}
   - Type: 14
-    Clip: {fileID: 8300000, guid: e434f2bf0297ea848962c6c4322e5584, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: e337cb877ef392c478e58dcd966b0c3c, type: 3}
   - Type: 15
-    Clip: {fileID: 8300000, guid: b65c86f38557c5841928990caf549475, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: b65c86f38557c5841928990caf549475, type: 3}
   - Type: 16
-    Clip: {fileID: 8300000, guid: 7c90a8d45201c2d4caa0a969e31bd20b, type: 3}
+    Clips:
+    - {fileID: 8300000, guid: 7c90a8d45201c2d4caa0a969e31bd20b, type: 3}
 --- !u!1001 &303120555
 PrefabInstance:
   m_ObjectHideFlags: 0
