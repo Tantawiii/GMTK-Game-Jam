@@ -10,7 +10,7 @@ public class SortObject : MonoBehaviour
     private InputAction m_interactAction;
 
     [Header("Raycast Settings")]
-    [SerializeField] private float raycastDistance = 5f;
+    [SerializeField] private float raycastDistance = 50f;
     [SerializeField] private LayerMask interactableLayer;
     [SerializeField] private string targetTag = "Sortable";
 
