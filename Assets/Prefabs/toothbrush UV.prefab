@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3174729900482357566}
   - component: {fileID: 2222661369333229872}
   - component: {fileID: 3407331452414445161}
+  - component: {fileID: 7552072714446082678}
+  - component: {fileID: 874594244587137294}
   m_Layer: 6
   m_Name: toothbrush UV
   m_TagString: Sortable
@@ -27,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6433223581534568888}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10519882, y: 0.117686026, z: 0.65809065, w: 0.73620653}
+  m_LocalRotation: {x: 0.105197385, y: 0.11768376, z: 0.65809286, w: 0.73620504}
   m_LocalPosition: {x: -2.033, y: 1.007, z: 0.866}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -99,3 +101,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c052326165bd8764e9d1955d6f93a0aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &7552072714446082678
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433223581534568888}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19320987, y: 0.02205597, z: 0.014028626}
+  m_Center: {x: 0.00000023841858, y: 0.00000011920929, z: -0.0000009536743}
+--- !u!114 &874594244587137294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433223581534568888}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

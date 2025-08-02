@@ -14,6 +14,8 @@ public class SortObject : MonoBehaviour
     [SerializeField] private LayerMask interactableLayer;
     [SerializeField] private string targetTag = "Sortable";
 
+    private Outline sortableOutline = null;
+
 
     private Camera playerCamera;
 
@@ -34,10 +36,7 @@ public class SortObject : MonoBehaviour
 
     private void Update()
     {
-        if (m_interactAction != null && m_interactAction.WasPressedThisFrame())
-        {
-            TryInteractWithObject();
-        }
+        TryInteractWithObject();
     }
 
     private void TryInteractWithObject()
@@ -53,8 +52,39 @@ public class SortObject : MonoBehaviour
                 ISortable sortable = hit.collider.GetComponent<ISortable>();
                 if (sortable != null)
                 {
-                    sortable.Sort(); // Call ONLY on the hit object
+                    Outline outline = hit.collider.GetComponent<Outline>();
+                    if (outline != sortableOutline && sortableOutline != null)
+                    {
+                        sortableOutline.enabled = false;
+                    }
+                    sortableOutline = outline;
+                    sortableOutline.enabled = true;
+                    if (m_interactAction != null && m_interactAction.WasPressedThisFrame())
+                    {
+                        sortable.Sort(); // Call ONLY on the hit object
+                    }
                 }
+                else
+                {
+                    if (sortableOutline != null)
+                    {
+                        sortableOutline.enabled = false;
+                    }
+                }
+            }
+            else
+            {
+                if (sortableOutline != null)
+                {
+                    sortableOutline.enabled = false;
+                }
+            }
+        }
+        else
+        {
+            if (sortableOutline != null)
+            {
+                sortableOutline.enabled = false;
             }
         }
     }

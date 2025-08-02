@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3670144794656221006}
   - component: {fileID: 7638940129214765114}
   - component: {fileID: -387881333688635958}
+  - component: {fileID: 84655322279244817}
+  - component: {fileID: 4703578470564033159}
   m_Layer: 6
   m_Name: bottle 3 UV
   m_TagString: Sortable
@@ -27,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7706978943113547861}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.9644, y: 0.9338, z: 0.8689995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -99,3 +101,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c052326165bd8764e9d1955d6f93a0aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &84655322279244817
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706978943113547861}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.04479919, y: 0.0576287, z: 0.04479919}
+  m_Center: {x: -0.00000011920929, y: 0, z: 0}
+--- !u!114 &4703578470564033159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706978943113547861}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

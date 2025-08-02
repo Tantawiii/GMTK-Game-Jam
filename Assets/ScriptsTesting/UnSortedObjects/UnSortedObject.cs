@@ -1,5 +1,6 @@
 using UnityEngine;
-
+[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Outline))]
 public class UnSortedObject : MonoBehaviour, ISortable
 {
     public void Sort()

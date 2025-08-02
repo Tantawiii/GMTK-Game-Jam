@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4176519970261484362}
   - component: {fileID: 2083503547033822122}
   - component: {fileID: -2459245380627899582}
+  - component: {fileID: -8819059468216515380}
+  - component: {fileID: 1873808278087683599}
   m_Layer: 6
   m_Name: paper holder UV
   m_TagString: Sortable
@@ -99,3 +101,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c052326165bd8764e9d1955d6f93a0aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &-8819059468216515380
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6873864959854770276}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19490966, y: 0.021133423, z: 0.10147156}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1873808278087683599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6873864959854770276}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
