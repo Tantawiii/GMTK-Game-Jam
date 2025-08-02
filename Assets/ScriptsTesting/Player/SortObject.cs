@@ -1,0 +1,96 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Events; // Add this namespace
+
+
+public class SortObject : MonoBehaviour
+{
+    [Header("Input Settings")]
+    public InputActionAsset InputActions;
+    private InputAction m_interactAction;
+
+    [Header("Raycast Settings")]
+    [SerializeField] private float raycastDistance = 50f;
+    [SerializeField] private LayerMask interactableLayer;
+    [SerializeField] private string targetTag = "Sortable";
+
+    private Outline sortableOutline = null;
+
+
+    private Camera playerCamera;
+
+    private void Awake()
+    {
+        playerCamera = Camera.main;
+        var playerMap = InputActions.FindActionMap("Player");
+        m_interactAction = playerMap.FindAction("Interact");
+
+        if (m_interactAction == null)
+        {
+            Debug.LogError("Interact action not found!");
+        }
+    }
+
+    private void OnEnable() => m_interactAction?.Enable();
+    private void OnDisable() => m_interactAction?.Disable();
+
+    private void Update()
+    {
+        TryInteractWithObject();
+    }
+
+    private void TryInteractWithObject()
+    {
+        Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, raycastDistance, interactableLayer))
+        {
+            if (hit.collider.CompareTag(targetTag))
+            {
+                // Get ISortable component from hit object
+                ISortable sortable = hit.collider.GetComponent<ISortable>();
+                if (sortable != null)
+                {
+                    Outline outline = hit.collider.GetComponent<Outline>();
+                    if (outline != sortableOutline && sortableOutline != null)
+                    {
+                        sortableOutline.enabled = false;
+                    }
+                    sortableOutline = outline;
+                    sortableOutline.enabled = true;
+                    if (m_interactAction != null && m_interactAction.WasPressedThisFrame())
+                    {
+                        sortable.Sort(); // Call ONLY on the hit object
+                    }
+                }
+                else
+                {
+                    if (sortableOutline != null)
+                    {
+                        sortableOutline.enabled = false;
+                    }
+                }
+            }
+            else
+            {
+                if (sortableOutline != null)
+                {
+                    sortableOutline.enabled = false;
+                }
+            }
+        }
+        else
+        {
+            if (sortableOutline != null)
+            {
+                sortableOutline.enabled = false;
+            }
+        }
+    }
+
+}
+public interface ISortable
+{
+    void Sort();
+}
