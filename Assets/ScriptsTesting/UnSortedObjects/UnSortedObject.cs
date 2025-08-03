@@ -7,6 +7,11 @@ public class UnSortedObject : MonoBehaviour, ISortable
 {
     bool m_Sorted = false;
     bool ISortable.IsSorted => m_Sorted;
+
+    public bool InCameraRange => throw new System.NotImplementedException();
+
+    public string SortableName => throw new System.NotImplementedException();
+
     private SortableSystemFOV sortableSystemFOV;
 
     private void Awake()

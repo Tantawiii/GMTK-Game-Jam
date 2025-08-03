@@ -11,6 +11,11 @@ public class FixWater : MonoBehaviour, ISortable
     
     bool m_Sorted = false;
     bool ISortable.IsSorted => m_Sorted;
+
+    public bool InCameraRange => throw new System.NotImplementedException();
+
+    public string SortableName => "Water drop";
+
     private SortableSystemFOV sortableSystemFOV;
     
     private void Awake()

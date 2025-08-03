@@ -123,6 +123,10 @@ public class SortObject : MonoBehaviour
 public interface ISortable
 {
     bool IsSorted { get; }
+
+    bool InCameraRange { get; }
+
+    string SortableName { get; }
     void Sort();
     void Unsort();
 }
