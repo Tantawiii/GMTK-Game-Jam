@@ -389,7 +389,8 @@ MonoBehaviour:
     Clips:
     - {fileID: 8300000, guid: 0ef380e66554cd243953a06c4038f0f1, type: 3}
   - Type: 6
-    Clips: []
+    Clips:
+    - {fileID: 8300000, guid: 237bdf2b80547fe4588f0875d96a1f2c, type: 3}
   - Type: 1
     Clips:
     - {fileID: 8300000, guid: e81f0956c56bf9349b1dc78e00fdb435, type: 3}
@@ -1680,6 +1681,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   targetTag: Sortable
+  useObserverSystem: 1
+  onlyInteractWithVisibleObjects: 1
 --- !u!1 &1177207769
 GameObject:
   m_ObjectHideFlags: 0
