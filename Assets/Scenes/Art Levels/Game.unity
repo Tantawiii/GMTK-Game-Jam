@@ -268,6 +268,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.007180001, y: 0.009953553, z: 0.0019535536}
   m_Center: {x: 0.0011066818, y: -0.000000014901161, z: -0.000017964074}
+--- !u!114 &273546113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273546105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &309802081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 94213243049221286, guid: fccdf91d8f638e443ba939a659806b62, type: 3}
@@ -1860,19 +1878,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.00030000252, y: 0.0014795491, z: 0.00031736383}
   m_Center: {x: 0.00020285782, y: -0.000000014901161, z: 0.00000001792796}
---- !u!114 &1255209765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255209757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c052326165bd8764e9d1955d6f93a0aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortableName: Drawer
 --- !u!114 &1255209766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1891,6 +1896,57 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!4 &1255209767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8836576713848606832, guid: fccdf91d8f638e443ba939a659806b62, type: 3}
+  m_PrefabInstance: {fileID: 1675100534740118126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1255209770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255209757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cecf10fbc2e206c4f895cdca0c2e196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onFixed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1255209757}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onUnFixed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1255209757}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  drawerTransform: {fileID: 1255209767}
+  closedLocalPosition: {x: 4.362, y: 0.12114171, z: 2.383}
+  duration: 1
+  sortableName: Drawer
 --- !u!1001 &1258394716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3914,10 +3970,13 @@ PrefabInstance:
       addedObject: {fileID: 1255209766}
     - targetCorrespondingSourceObject: {fileID: 2241193548239286344, guid: fccdf91d8f638e443ba939a659806b62, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1255209765}
+      addedObject: {fileID: 1255209770}
     - targetCorrespondingSourceObject: {fileID: 6358837422566125667, guid: fccdf91d8f638e443ba939a659806b62, type: 3}
       insertIndex: -1
       addedObject: {fileID: 273546109}
+    - targetCorrespondingSourceObject: {fileID: 6358837422566125667, guid: fccdf91d8f638e443ba939a659806b62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 273546113}
     - targetCorrespondingSourceObject: {fileID: 8200398158272959909, guid: fccdf91d8f638e443ba939a659806b62, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1923886562}
