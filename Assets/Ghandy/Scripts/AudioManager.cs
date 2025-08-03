@@ -34,12 +34,14 @@ public class SoundEntry
 public class AudioManager : MonoBehaviour
 {
     // === Singleton Access ===
-    public static AudioManager Instance { get; private set; }
+    public static AudioManager Instance { get;  set; }
 
     // === Serialized Fields (Editable in Inspector) ===
     [Header("Background Music")]
     [SerializeField] private AudioClip BackgroundMusic;
     [SerializeField, Range(0f, 1f)] private float BackgroundVolume = 0.2f;
+
+    public float SFXVolume = 0.5f;
 
     [Header("Sound Effects")]
     [SerializeField] private List<SoundEntry> SoundClipsList;
@@ -102,6 +104,10 @@ public class AudioManager : MonoBehaviour
         if (BackgroundAudioSource != null)
             BackgroundAudioSource.volume = BackgroundVolume;
     }
+    public void SetSFXVolume(float newVolume)
+    {
+        SFXVolume = Mathf.Clamp01(newVolume);
+    }
 
     public void PlaySoundAt(SoundType type, GameObject target)
     {
@@ -121,6 +127,7 @@ public class AudioManager : MonoBehaviour
         AudioSource tempSource = target.AddComponent<AudioSource>();
         tempSource.clip = clips[randomIndex];
         tempSource.pitch = randomPitch;
+        tempSource.volume = SFXVolume;
         tempSource.spatialBlend = 1.0f; // 3D sound
         tempSource.Play();
 
