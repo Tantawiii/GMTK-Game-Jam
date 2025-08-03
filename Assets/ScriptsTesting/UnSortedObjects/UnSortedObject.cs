@@ -8,9 +8,11 @@ public class UnSortedObject : MonoBehaviour, ISortable
     bool m_Sorted = false;
     bool ISortable.IsSorted => m_Sorted;
 
-    public bool InCameraRange => throw new System.NotImplementedException();
+    bool inCameraRange = false;
+    public bool InCameraRange { get => inCameraRange; set => inCameraRange = value; }
 
-    public string SortableName => throw new System.NotImplementedException();
+    [SerializeField] string sortableName;
+    public string SortableName => sortableName;
 
     private SortableSystemFOV sortableSystemFOV;
 

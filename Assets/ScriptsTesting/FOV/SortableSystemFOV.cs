@@ -112,6 +112,11 @@ public class SortableSystemFOV : MonoBehaviour
                         Debug.Log($"Sortable object {((MonoBehaviour)sortable).name} became visible");
                 }
             }
+            else
+            {
+                col.GetComponent<Outline>().enabled = false;
+                sortable.InCameraRange = false;
+            }
         }
         
         // Check for sortables that left view
@@ -140,12 +145,14 @@ public class SortableSystemFOV : MonoBehaviour
         
         if (isVisible)
         {
-            outline.enabled = true;
-            outline.OutlineColor = sortable.IsSorted ? sortedObjectColor : unsortedObjectColor;
+            //outline.enabled = true;
+            //outline.OutlineColor = sortable.IsSorted ? sortedObjectColor : unsortedObjectColor;
+            sortable.InCameraRange = true;
         }
         else
         {
             outline.enabled = false;
+            sortable.InCameraRange = false;
         }
     }
     

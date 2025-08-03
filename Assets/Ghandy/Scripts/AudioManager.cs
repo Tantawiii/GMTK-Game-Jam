@@ -144,7 +144,6 @@ public class AudioManager : MonoBehaviour
         float randomPitch = UnityEngine.Random.Range(0.8f, 1.2f);
 
         AudioSource tempSource = target.AddComponent<AudioSource>();
-        Debug.Log(randomIndex);
         tempSource.clip = clips[randomIndex];
         tempSource.pitch = randomPitch;
         tempSource.spatialBlend = 0.0f; // 3D sound

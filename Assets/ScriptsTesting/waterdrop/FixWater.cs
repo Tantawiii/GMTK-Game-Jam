@@ -12,9 +12,11 @@ public class FixWater : MonoBehaviour, ISortable
     bool m_Sorted = false;
     bool ISortable.IsSorted => m_Sorted;
 
-    public bool InCameraRange => throw new System.NotImplementedException();
+    [SerializeField] string sortableName = "Water drop";
+    public string SortableName => sortableName;
 
-    public string SortableName => "Water drop";
+    bool inCameraRange = false;
+    public bool InCameraRange { get => inCameraRange; set => inCameraRange = value; }
 
     private SortableSystemFOV sortableSystemFOV;
     

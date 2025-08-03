@@ -1,12 +1,24 @@
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TaskPaper : MonoBehaviour
 {
     [SerializeField] private GameObject panel; // Reference to the visible UI part
+    [SerializeField] private Transform content;
     private bool isVisible = false;
+    [SerializeField] List<GameObject> sortables;
 
     void Start()
     {
+        foreach(GameObject sortable in sortables)
+        {
+            ISortable sortableComponent = sortable.GetComponent<ISortable>();
+            TextMeshProUGUI text = new GameObject("TaskText", typeof(TextMeshProUGUI)).GetComponent<TextMeshProUGUI>();
+            text.text = sortableComponent.SortableName;
+            text.color = Color.black;
+            text.transform.SetParent(content, false);
+        }
         if (panel != null)
             panel.SetActive(false);
     }
