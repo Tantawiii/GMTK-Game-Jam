@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -77,7 +78,7 @@ public class Manager : MonoBehaviour
                 return;
             }
         }
-
+        SceneManager.LoadScene("EndGameScene");
         Debug.Log("✅ All objects are unsorted.");
     }
 
