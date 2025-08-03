@@ -77,9 +77,12 @@ public class SortObject : MonoBehaviour
                     
                     if (sortableOutline != null)
                     {
-                        sortableOutline.enabled = true;
-                        // Set outline color based on sort state
-                        sortableOutline.OutlineColor = sortable.IsSorted ? Color.green : Color.yellow;
+                        if (sortable.InCameraRange)
+                        {
+                            sortableOutline.enabled = true;
+                            // Set outline color based on sort state
+                            sortableOutline.OutlineColor = sortable.IsSorted ? Color.green : Color.yellow;
+                        }
                     }
                     
                     // Handle interaction input
@@ -123,6 +126,8 @@ public class SortObject : MonoBehaviour
 public interface ISortable
 {
     bool IsSorted { get; }
+    public bool InCameraRange { get; set; }
+    string SortableName { get; }
     void Sort();
     void Unsort();
 }
