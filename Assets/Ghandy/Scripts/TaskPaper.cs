@@ -7,7 +7,7 @@ public class TaskPaper : MonoBehaviour
     [SerializeField] private GameObject panel; // Reference to the visible UI part
     [SerializeField] private Transform content;
     private bool isVisible = false;
-    [SerializeField] List<GameObject> sortables;
+    [SerializeField] public List<GameObject> sortables;
 
     void Start()
     {
