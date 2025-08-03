@@ -20,7 +20,7 @@ public class TaskPaper : MonoBehaviour
             isVisible = !isVisible;
             panel.SetActive(isVisible);
 
-            AudioManager.Instance.PlaySoundAt(SoundType.PaperSound, gameObject);
+            AudioManager.Instance.PlaySound2D(SoundType.PaperSound, gameObject);
         }
     }
 }
