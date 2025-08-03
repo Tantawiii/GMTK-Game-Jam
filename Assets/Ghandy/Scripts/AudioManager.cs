@@ -128,6 +128,32 @@ public class AudioManager : MonoBehaviour
     }
 
 
+    public void PlaySound2D(SoundType type, GameObject target)
+    {
+        if (!SoundClipsDict.TryGetValue(type, out List<AudioClip> clips) || clips == null)
+        {
+            Debug.LogWarning($"Sound type '{type}' not found or clip is null.");
+            if (clips.Count == 0)
+            {
+                Debug.LogWarning($"No clips available for sound type '{type}'.");
+            }
+            return;
+        }
+
+        int randomIndex = UnityEngine.Random.Range(0, clips.Count);
+        float randomPitch = UnityEngine.Random.Range(0.8f, 1.2f);
+
+        AudioSource tempSource = target.AddComponent<AudioSource>();
+        Debug.Log(randomIndex);
+        tempSource.clip = clips[randomIndex];
+        tempSource.pitch = randomPitch;
+        tempSource.spatialBlend = 0.0f; // 3D sound
+        tempSource.Play();
+
+        Destroy(tempSource, clips[randomIndex].length);
+    }
+
+
     public void PlayLoop(SoundType type, GameObject target)
     {
         if (!SoundClipsDict.TryGetValue(type, out List<AudioClip> clips) || clips == null)
@@ -153,6 +179,33 @@ public class AudioManager : MonoBehaviour
         tempSource.playOnAwake = false;
         tempSource.Play();
     }
+
+    public void PlayLoop2D(SoundType type, GameObject target)
+    {
+        if (!SoundClipsDict.TryGetValue(type, out List<AudioClip> clips) || clips == null)
+        {
+            Debug.LogWarning($"Sound type '{type}' not found or clip is null.");
+            if (clips.Count == 0)
+            {
+                Debug.LogWarning($"No clips available for sound type '{type}'.");
+            }
+            return;
+        }
+
+        int randomIndex = UnityEngine.Random.Range(0, clips.Count);
+        float randomPitch = UnityEngine.Random.Range(0.8f, 1.2f);
+
+        AudioSource tempSource = target.AddComponent<AudioSource>();
+
+        tempSource.clip = clips[randomIndex];
+        tempSource.spatialBlend = 0.0f; // 3D sound
+        tempSource.pitch = randomPitch;
+        tempSource.loop = true;
+        tempSource.spatialBlend = 1.0f;
+        tempSource.playOnAwake = false;
+        tempSource.Play();
+    }
+
 
 
     public void PauseSound(AudioSource source)
